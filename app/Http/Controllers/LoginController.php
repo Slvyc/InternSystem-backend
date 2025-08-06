@@ -31,11 +31,11 @@ class LoginController extends Controller
             Auth::login($user);
 
             if ($user->role === 'admin') {
-                return redirect('/admin');
+                return redirect()->route('admin.dashboard');
             } else if ($user->role === 'mentor') {
-                return redirect('mentor');
+                return redirect()->route('mentor.dashboard');
             } else if ($user->role === 'peserta') {
-                return redirect('peserta');
+                return redirect()->route('peserta.dashboard');
             } 
             // Setelah login, user diarahkan ke halaman sesuai dengan perannya (admin, mentor, atau peserta).
         }

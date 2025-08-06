@@ -74,7 +74,7 @@
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label" for="email">Email</label>
                     {{-- cek validasi kolom harus diisi --}}
-                    <input type="email" name="email" value="{{ old('email') }}" class="form-control">
+                    <input type="email" name="email" required value="{{ old('email') }}" class="form-control">
                   </div>
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label" for="password">Password</label>
